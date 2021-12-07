@@ -1,6 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Settings from "../views/Settings.vue";
+import Users from "../views/Users.vue";
+import UserDetails from "../views/UserDetails.vue";
 
 Vue.use(VueRouter);
 
@@ -9,6 +12,22 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    component: Settings,
+  },
+  {
+    path: "/users",
+    name: "Users",
+    component: Users,
+  },
+  {
+    path: "/user/:userId",
+    name: "UserDetails",
+    component: UserDetails,
+    props: true,
   },
   {
     path: "/about",
